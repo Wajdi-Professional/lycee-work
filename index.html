@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>النصح</title>
     <style>
-        /* تنسيقات CSS لتجميل الموقع */
+        /* CSS styling for a responsive site */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f8ff;
@@ -40,6 +40,11 @@
             padding: 15px;
             margin: 15px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease; /* Animation for a slight hover effect */
+        }
+
+        .advice-card:hover {
+            transform: scale(1.02); /* Slightly enlarge card on hover */
         }
 
         .advice-card h2 {
@@ -53,9 +58,11 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            font-size: 0.9em;
         }
 
         .note-button {
+            display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
             background-color: #e74c3c;
@@ -70,6 +77,26 @@
         .note-button:hover {
             background-color: #c0392b;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .advice-card {
+                padding: 10px;
+            }
+
+            .note-button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,14 +107,15 @@
         <div class="advice-card">
             <h2>النصيحة الأولى</h2>
             <p>شكر الوالدين على كل ما قدّماه</p>
-            <p>إلى والديَّ العزيزين، إلى أول من زرع بذور الحب والعطاء في حياتي، أشكركما من أعماق قلبي على كل لحظة من لحظات الرعاية والتضحية. أشكركما على الأمان الذي غمرتماني به منذ ولادتي، وعلى الدعم الذي لم تبخلا به في كل خطوة من خطوات حياتي. مهما حاولت التعبير بالكلمات، فلن أتمكن من رد جميلكما أو موازاة ما قدمتماه لي من حب وتوجيه. أنا ممتنٌّ لكل تضحية، وكل دعاء، وكل نصيحة منحتماني إياها، فأنتما أساس سعادتي ودافعي لتحقيق أحلامي. أسأل الله أن يمنحكما الصحة والسعادة، ويجزيكما عني كل خير.</p>        </div>
+            <p>إلى والديَّ العزيزين، إلى أول من زرع بذور الحب والعطاء في حياتي، أشكركما من أعماق قلبي على كل لحظة من لحظات الرعاية والتضحية. أشكركما على الأمان الذي غمرتماني به منذ ولادتي، وعلى الدعم الذي لم تبخلا به في كل خطوة من خطوات حياتي. مهما حاولت التعبير بالكلمات، فلن أتمكن من رد جميلكما أو موازاة ما قدمتماه لي من حب وتوجيه. أنا ممتنٌّ لكل تضحية، وكل دعاء، وكل نصيحة منحتماني إياها، فأنتما أساس سعادتي ودافعي لتحقيق أحلامي. أسأل الله أن يمنحكما الصحة والسعادة، ويجزيكما عني كل خير.</p>
+        </div>
 
         <div class="advice-card">
             <h2>النصيحة الثانية</h2>
             <p>خذ وقتك للاسترخاء وتصفية ذهنك. قم بالمشي في الطبيعة لتجديد نشاطك.</p>
         </div>
 
-        <!-- زر الدخول لصفحة الملاحظات -->
+        <!-- Button to go to notes page -->
         <a href="notes.html" class="note-button">تسجيل ملاحظات</a>
     </div>
 
