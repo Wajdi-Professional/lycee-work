@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Simple Website with Fullscreen Embedded File</title>
+    <style>
+        /* Ensures full height for html and body */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style for the iframe to be fullscreen */
+        iframe {
+            flex-grow: 1;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <section id="embedded-file">
-        <h2>Embedded File</h2>
-        <p>Below is an embedded file from Google Drive:</p>
-        <iframe src="https://drive.google.com/file/d/1zWwtUSWdjCOL5G7O78VQL7HbVOWPcD-f/preview" width="640" height="480" allow="autoplay"></iframe>
-    </section>
+
+    <!-- Embedded Google Drive File in Fullscreen -->
+    <iframe src="https://drive.google.com/file/d/1zWwtUSWdjCOL5G7O78VQL7HbVOWPcD-f/preview" width="100%" height="100vh" allow="autoplay"></iframe>
+
 </body>
 </html>
